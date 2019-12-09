@@ -133,11 +133,16 @@ header{
     transform: translate3d(15%, 6em, 0) rotate(0deg);
 }
 
+.inner-block {
+    height: 100vh;
+}
+
 
 .top-block{
     padding-top: 250px;
+    min-height: 740px;
 
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 
@@ -256,11 +261,12 @@ header{
 }
 
 .second-block{
-    height: 100vh;
+    padding-top: 290px;
+    /*height: 100vh;*/
+    /*min-height: 740px;*/
 }
 
 .second-block .title{
-    padding-top: 290px;
 }
 
 .video-block{
@@ -354,14 +360,21 @@ header{
 
 
 .third-block {
-    height: 100vh;
     padding-top: 500px;
-    margin-bottom: 555px;
-    margin-bottom: 28.90625vw;
+    /*height: 100vh;*/
+    /*min-height: 740px;*/
+    /*margin-bottom: 555px;*/
+    /*margin-bottom: 28.90625vw;*/
+
 }
+
+.third-block .inner-block{
+    background: white;
+}
+
 .third-block .title__caption {
-    margin-bottom: 150px;
-    margin-bottom: 7.8125vw;
+    /*margin-bottom: 150px;*/
+    /*margin-bottom: 7.8125vw;*/
 }
 .about-us__list {
     display: flex;
@@ -398,8 +411,10 @@ header{
     justify-content: center;
 }
 .fourth-block {
-    margin-bottom: 300px;
-    margin-bottom: 15.625vw;
+    /*margin-bottom: 300px;*/
+    /*margin-bottom: 15.625vw;*/
+    /*min-height: 740px;*/
+    /*height: 100vh;*/
 }
 .title--other {
     display: flex;
