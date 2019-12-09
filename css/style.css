@@ -75,6 +75,7 @@ body {
 
 .container {
     max-width: 1530px;
+    max-width: 79.6875vw;
     margin: auto;
 }
 
@@ -134,7 +135,7 @@ header{
 
 
 .top-block{
-    padding-top: 120px;
+    padding-top: 250px;
 
     height: 100vh;
 }
@@ -177,6 +178,8 @@ header{
 
 .title--other .title__txt{
     font-size: 60px;
+    line-height: 77px;
+    line-height: 4.01vw;
     color: white;
     text-align: center;
 }
@@ -252,6 +255,9 @@ header{
     color: white;
 }
 
+.second-block{
+    height: 100vh;
+}
 
 .second-block .title{
     padding-top: 290px;
@@ -269,8 +275,8 @@ header{
 .video-block__top{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
-    margin-bottom:  5.208vw;
+    margin-bottom: 72px;
+    margin-bottom: 3.75vw;
     width: 100%;
 }
 
@@ -285,6 +291,7 @@ header{
     align-items: center;
     position: relative;
     overflow: hidden;
+    max-height: 410px;
 }
 
 .video-block__left a:after{
@@ -347,6 +354,8 @@ header{
 
 
 .third-block {
+    height: 100vh;
+    padding-top: 500px;
     margin-bottom: 555px;
     margin-bottom: 28.90625vw;
 }
