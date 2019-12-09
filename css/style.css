@@ -64,6 +64,10 @@ body {
 
 }
 
+.page-wrap{
+    background: url("../img/bg-s.jpg") top left no-repeat;
+}
+
 .container {
     max-width: 1530px;
     margin: auto;
