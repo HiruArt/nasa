@@ -151,6 +151,7 @@ header {
 
     background: white;
     position: relative;
+    overflow: hidden;
 }
 
 .waves-1 {
@@ -165,6 +166,17 @@ header {
     background-repeat: no-repeat;
     background-position-x: 46.5%;
     background-position-y: 58%;
+    animation: waves1 3s linear;
+}
+@keyframes waves1 {
+    from {
+        background-position-x: 46.5%;
+        background-position-y: 58%;
+    }
+    to {
+        background-position-x: 62.5%;
+        background-position-y: 73%;
+    }
 }
 .waves-2 {
     background-image: url("../img/animate/wave2.svg");
@@ -179,6 +191,21 @@ header {
     background-position-x: 35%;
     background-position-y: 39%;
     opacity: 0.3;
+    animation: waves2 5s ease-out;
+}
+@keyframes waves2 {
+    from {
+        background-position-x: 35%;
+        background-position-y: 39%;
+    }
+    50% {
+        background-position-x: 44%;
+        background-position-y: 30%;
+    }
+    to {
+        background-position-x: 35%;
+        background-position-y: 39%;
+    }
 }
 .waves-3 {
     background-image: url("../img/animate/wave2.svg");
@@ -193,7 +220,23 @@ header {
     background-position-x: 52%;
     background-position-y: 35%;
     opacity: 0.3;
+    animation: waves3 5s ease-out;
 }
+@keyframes waves3 {
+    from {
+        background-position-x: 52%;
+        background-position-y: 35%;
+    }
+    50% {
+        background-position-x: 16%;
+        background-position-y: 42%;
+    }
+    to {
+        background-position-x: 52%;
+        background-position-y: 35%;
+    }
+}
+
 
 
 .top-rocket{
@@ -210,6 +253,74 @@ header {
     margin-left: 147px;
     margin-left: 7.656vw;
     transform: rotate(-34deg);
+    animation: top-rocket 3s linear ;
+}
+@keyframes top-rocket {
+    from {
+        transform: translate(0px, -10px) rotate(-34deg);
+    }
+    to {
+        transform: translate(-131%, -82%) rotate(-34deg);
+    }
+}
+.fire-big {
+    position: absolute;
+    width: 183px;
+    height: 130px;
+    right: 0;
+    bottom: -85px;
+    background-image: url(../img/animate/fire.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: 6px;
+    animation: fire-big 5s ease-in-out ;
+}
+@keyframes fire-big {
+    from {
+        transform: translate(0px, -10px);
+    }
+    25% {
+        transform: translate(0px, 5px);
+    }
+    50% {
+        transform: translate(0px, -10px);
+    }
+    75% {
+        transform: translate(0px, 5px);
+    }
+    to {
+        transform: translate(0px, -10px);
+    }
+}
+.fire-min {
+    position: absolute;
+    width: 93px;
+    height: 98px;
+    right: 45px;
+    bottom: -70px;
+    background-image: url(../img/animate/fire.svg);
+    background-repeat: no-repeat;
+    background-size: 190%;
+    background-position-x: 3px;
+    background-position-y: -175px;
+    animation: fire-min 5s ease-in-out;
+}
+@keyframes fire-min {
+    from {
+        transform: translate(0px, 10px);
+    }
+    25%{
+        transform: translate(0px, -5px);
+    }
+    50% {
+        transform: translate(0px, 10px);
+    }
+    75%{
+        transform: translate(0px, -5px);
+    }
+    to {
+        transform: translate(0px, 10px);
+    }
 }
 
 
