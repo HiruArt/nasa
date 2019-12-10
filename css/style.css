@@ -289,14 +289,19 @@ header {
 }
 .fire-big {
     position: absolute;
-    width: 183px;
+    /*width: 183px;*/
+    /*width: 11.4375vw;*/
+    width: 143px;
+    width: 9.9375vw;
     height: 130px;
+    height: 8.125vw;
     right: 0;
-    bottom: -85px;
+    bottom: -5.3125vw;
     background-image: url(../img/animate/fire.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-x: 6px;
+    background-position-x: 0.375vw;
     z-index: 0;
     visibility: hidden;
 }
@@ -307,49 +312,56 @@ header {
 @keyframes fire-big {
     from {
         transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
     10% {
         transform: translate(0px, 5px);
+        transform: translate(0px, 0.3125vw);
     }
     20% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
     30% {
-        transform: translate(0px, 5px);
+        transform: translate(0px, 0.3125vw);
     }
     40% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
     50% {
-        transform: translate(0px, 5px);
+        transform: translate(0px, 0.3125vw);
     }
     60% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
     70% {
-        transform: translate(0px, 5px);
+        transform: translate(0px, 0.3125vw);
     }
     80% {
-        transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
     90% {
-        transform: translate(0px, 5px);
+        transform: translate(0px, 0.3125vw);
     }
     to {
-        transform: translate(0px, -10px);
+        transform: translate(0px, -0.625vw);
     }
 }
 .fire-min {
     position: absolute;
     width: 93px;
+    width: 5.8125vw;
     height: 98px;
+    height: 6.125vw;
     right: 45px;
+    /*right: 2.8125vw;*/
+    right: 1.9vw;;
     bottom: -70px;
+    bottom:  -4.375vw;
     background-image: url(../img/animate/fire.svg);
     background-repeat: no-repeat;
     background-size: 190%;
-    background-position-x: 3px;
-    background-position-y: -175px;
+    background-position-x:  0.1875vw;
+    background-position-y: -10.9375vw;
     z-index: 0;
     visibility: hidden;
 }
@@ -377,7 +389,37 @@ header {
     }
 }
 
+.stars {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/allstars.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.stars-top-block {
+    opacity: 0;
+    transition: 3s;
 
+}
+.active .stars-top-block {
+    opacity: 1;
+}
+
+.gradient .gradient-top{
+    position: absolute;
+    width: 150vw;
+    height: 150vh;
+    background-color: transparent;
+    background-image: radial-gradient( circle closest-side, white, transparent );
+    right: -80vh;
+    top: -40vh;
+    opacity: 0.5;
+}
 
 .title__txt {
     font-weight: 900;
