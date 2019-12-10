@@ -30,9 +30,13 @@
             </div>
         </div>
     </header>
+    <!--<div id="scene" class="scene">-->
+    <!--<div data-depth="1.00"><img src="./img/animate/rocket.svg"></div>-->
+    <!--</div>-->
+
     <main>
         <div class="main ">
-            <div class="top-block">
+            <div class="top-block scroll-block" id="top-block">
                 <div class="inner-block container">
                     <div class="title">
                         <h1 class="title__txt">
@@ -53,7 +57,7 @@
                 <div class="top-rocket"></div>
             </div>
 
-            <div class="second-block">
+            <div class="second-block scroll-block" id="second-block">
                 <div class="inner-block container">
                     <div class="title title--other">
                         <h1 class="title__txt">
@@ -94,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="third-block">
+            <div class="third-block scroll-block" id="third-block">
                 <div class="inner-block container">
                     <div class="title">
                         <h1 class="title__txt">
@@ -155,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="fourth-block">
+            <div class="fourth-block scroll-block" id="fourth-block">
                 <div class="inner-block container">
                     <div class="title title--other">
                         <h1 class="title__txt">
@@ -178,7 +182,7 @@
         </div>
     </main>
     <footer>
-        <div class="footer ">
+        <div class="footer scroll-block" id="footer">
             <div class="container footer__inner">
                 <div class="footer__left">
                     <div class="footer__social">
@@ -243,6 +247,7 @@
 </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/parallax.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
