@@ -7,6 +7,7 @@
     <title>NASA</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -57,18 +58,22 @@
                 <div class="waves-1"></div>
                 <div class="waves-2"></div>
 
-                <div class="paralax paralax-bit">
-                    <div class="bitkoin" data-depth="0.20"></div>
+                <div class="paralax paralax-1">
+                    <div class="bitkoin" data-depth="-0.20"></div>
                 </div>
 
                 <div class="waves-3"></div>
 
-                <div class="paralax">
-                    <div class="planet-1" data-depth="1.00"></div>
+                <div class="paralax paralax-2">
+                    <div class="planet-1" data-depth="0.10"></div>
                 </div>
 
 
-                <div class="top-rocket"></div>
+
+                <div class="top-rocket">
+                    <div class="fire-big"></div>
+                    <div class="fire-min"></div>
+                </div>
             </div>
 
             <div class="second-block scroll-block" data-id="second-block">
@@ -82,13 +87,13 @@
 
                     <div class="video-block">
                         <div class="video-block__top">
-                            <div class="video-block__left">
+                            <div class="video-block__left" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1500">
                                 <a href="#">
                                     <img src="./img/video-img.jpg" alt="img">
                                 </a>
                             </div>
 
-                            <div class="video-block__right">
+                            <div class="video-block__right" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1500">
                                 <div class="video-block__list">
                                     <div class="video-block__item">
                                         Бесплатно для всех
@@ -111,24 +116,30 @@
                     </div>
                 </div>
 
-                <div class="planet-2"></div>
-                <div class="planet-3"></div>
+                <div class="paralax paralax-3">
+                    <div class="planet-2" data-depth="-0.25"></div>
+                </div>
+
+                <div class="paralax paralax-4">
+                    <div class="planet-3" data-depth="0.19"></div>
+                </div>
+
             </div>
 
             <div class="third-block " >
                 <div class="inner-block container scroll-block" data-id="third-block">
                     <div class="title">
-                        <h1 class="title__txt">
+                        <h1 class="title__txt" data-aos="fade-down" data-aos-delay="250" data-aos-duration="1500">
                             Мы разработали собственную <br>
                             систему НАСА
                         </h1>
-                        <div class="title__caption">
+                        <div class="title__caption" data-aos="fade-down" data-aos-delay="250" data-aos-duration="1500">
                             которая автоматизирует процесс рекрутинга кандидатов
                             и их обучения без вашего участия
                         </div>
                     </div>
 
-                    <div class="about-us">
+                    <div class="about-us" data-aos="fade-down" data-aos-delay="250" data-aos-duration="1500">
                         <div class="about-us__list">
                             <div class="about-us__item">
                                 <div class="about-us__item-img">
@@ -176,31 +187,39 @@
                 </div>
 
 
-                <div class="planet-4"></div>
+                <div class="paralax paralax-5">
+                    <div class="planet-4" data-depth="0.28"></div>
+                </div>
 
-                <div class="planet-5"></div>
+                <div class="paralax paralax-6">
+                    <div class="planet-5" data-depth="-0.23"></div>
+                </div>
+
 
             </div>
 
             <div class="fourth-block scroll-block" data-id="fourth-block" data-pixel="100">
                 <div class="inner-block container">
                     <div class="title title--other">
-                        <h1 class="title__txt">
+                        <h1 class="title__txt" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1500">
                             Подключите авторекруту НАСА
                             прямо сейчас
                         </h1>
-                        <div class="title__caption">
+                        <div class="title__caption" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1500">
                             Это – новый шаг в сетевом! <br>
                             Создать глобальную команду и заработать на достойную <br>
                             жизнь теперь проще, чем когда-либо!
                         </div>
-                        <a href="#" class="button-site button-site--other">
+                        <a href="#" class="button-site button-site--other" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1500">
                             Подключить систему
                         </a>
                     </div>
                 </div>
 
-                <div class="planet-6"></div>
+
+                <div class="paralax paralax-7">
+                    <div class="planet-6" data-depth="0.15"></div>
+                </div>
 
             </div>
 
@@ -274,6 +293,7 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
