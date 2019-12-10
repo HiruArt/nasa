@@ -66,7 +66,7 @@ a {
 }
 
 body {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .page-wrap {
@@ -85,7 +85,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 50;
 }
 
 .header {
@@ -139,6 +139,8 @@ header {
 }
 
 .inner-block {
+    position: relative;
+    z-index: 50;
     height: 100vh;
 }
 
@@ -165,6 +167,7 @@ header {
     background-repeat: no-repeat;
     background-position-x: 46.5%;
     background-position-y: 58%;
+    z-index: 20;
 }
 .waves-2 {
     background-image: url("../img/animate/wave2.svg");
@@ -179,6 +182,7 @@ header {
     background-position-x: 35%;
     background-position-y: 39%;
     opacity: 0.3;
+    z-index: 5;
 }
 .waves-3 {
     background-image: url("../img/animate/wave2.svg");
@@ -193,6 +197,7 @@ header {
     background-position-x: 52%;
     background-position-y: 35%;
     opacity: 0.3;
+    z-index: 10;
 }
 
 
@@ -210,6 +215,7 @@ header {
     margin-left: 147px;
     margin-left: 7.656vw;
     transform: rotate(-34deg);
+    z-index: 20;
 }
 
 
@@ -344,9 +350,7 @@ header {
 }
 
 .second-block {
-    padding-top: 0;
-    /*height: 100vh;*/
-    /*min-height: 740px;*/
+    position: relative;
 }
 
 .second-block .title {
@@ -459,9 +463,21 @@ header {
     min-height: 1780px;
     min-height: 92.7vw;
 
+
+
+}
+
+.third-block:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url(../img/bg2.png) no-repeat;
     background-position-y: 0;
-
+    z-index: 5;
 }
 
 .third-block:after{
@@ -477,7 +493,7 @@ header {
     width: 25vw;
     height: 870px;
     height: 45.31vw;
-    z-index: 2;
+    z-index: 10;
     background: url("../img/FX.png") center center no-repeat;
     background-size: contain;
 }
@@ -532,10 +548,7 @@ header {
 
 
 .fourth-block {
-    /*margin-bottom: 300px;*/
-    /*margin-bottom: 15.625vw;*/
-    /*min-height: 740px;*/
-    /*height: 100vh;*/
+    position: relative;
 }
 
 .fourth-block .inner-block{
@@ -648,3 +661,159 @@ footer{
     line-height: 1.57375vw;
 }
 
+.bitkoin{
+    width: 230px;
+    width: 11.979166666666666vw;
+    height: 230px;
+    height: 11.979166666666666vw;
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    background: url("../img/animate/top-svg.svg");
+    background-size: 230px;
+    background-size: 11.979166666666666vw;
+    z-index: 15;
+
+
+    margin-left: 30px;
+    margin-left: 1.5625vw;
+    margin-top: 120px;
+    margin-top: 6.25vw;
+}
+
+.paralax-bit{
+    z-index: 15;
+}
+
+.planet-1,
+.planet-2,
+.planet-3,
+.planet-4,
+.planet-5,
+.planet-6{
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+}
+
+.planet-1{
+    width: 107px;
+    width: 5.572916666666667vw;
+    height: 107px;
+    height: 5.572916666666667vw;
+
+
+    background: url("../img/animate/top-svg.svg");
+    background-size: 405px;
+    background-size: 21.242678vw;
+    background-position-y: 179px;
+    background-position-y: 9.482566vw;
+    z-index: 100;
+
+    margin-left: 705px;
+    margin-left: 36.71875vw;
+    margin-top: 173px;
+    margin-top: 9.010416666666666vw;
+
+}
+
+.planet-2{
+
+    background: url("../img/animate/planet.svg");
+
+    width: 105px;
+    width: 5.46875vw;
+    height: 105px;
+    height: 5.46875vw;
+    background-position-y: 145px;
+    background-position-y: 7.552083333333333vw;
+    background-size: 145px;
+    background-size: 7.552083333333333vw;
+
+
+    margin-top: -480px;
+    margin-top: -25vw;
+    margin-left: 800px;
+    margin-left: 41.666666666666664vw;
+    transform: rotate(35deg);
+}
+
+.planet-3{
+
+    background: url(../img/animate/planet.svg);
+
+    width: 115px;
+    width: 5.989583333333333vw;
+    height: 58px;
+    height:  3.0208333333333335vw;
+    margin-left: -870px;
+    margin-left: -45.3125vw;
+    margin-top: -342px;
+    margin-top: -17.8125vw;
+}
+
+.planet-4{
+
+    background: url(../img/animate/planet.svg);
+
+
+    width: 132px;
+    width: 6.875vw;
+    height: 132px;
+    height: 6.875vw;
+    background-size: 417px;
+    background-size: 21.71875vw;
+    background-position-y: -136px;
+    background-position-y: -7.083333333333333vw;
+    margin-top: -658px;
+    margin-top: -34.270833333333336vw;
+    margin-left: 696px;
+    margin-left: 36.25vw;
+
+}
+
+.planet-5{
+
+    background: url(../img/animate/planet.svg);
+
+
+    width: 163px;
+    height: 163px;
+    background-size: 516px;
+    background-position-y: -380px;
+    margin-top: 533px;
+    margin-left: -731px;
+
+    z-index: 1;
+
+}
+
+.planet-6{
+
+    background: url(../img/animate/planet.svg);
+
+
+    width: 132px;
+    width: 6.875vw;
+    height: 132px;
+    height: 6.875vw;
+    background-size: 417px;
+    background-size: 21.71875vw;
+    background-position-y: -490px;
+    background-position-y: -25.520833333333332vw;
+    margin-top: 140px;
+    margin-top: 7.291666666666667vw;
+    margin-left: 640px;
+    margin-left: 33.333333333333336vw;
+
+    z-index: 1;
+
+}
+
+.paralax{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

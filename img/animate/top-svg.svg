@@ -303,9 +303,9 @@
 			<stop  offset="0.9891" style="stop-color:#E6CE88"/>
 			<stop  offset="0.9925" style="stop-color:#DEC17A"/>
 			<stop  offset="0.996" style="stop-color:#D0AB64"/>
-			<stop  offset="0.9996" style="stop-color:#BD8D46"/>
-			<stop  offset="1" style="stop-color:#BB8942"/>
-			<stop  offset="1" style="stop-color:#FFF8B0"/>
+			<!--<stop  offset="0.9996" style="stop-color:#BD8D46"/>-->
+			<!--<stop  offset="1" style="stop-color:#BB8942"/>-->
+			<!--<stop  offset="1" style="stop-color:#FFF8B0"/>-->
 		</radialGradient>
 		<circle class="st0" cx="125.9" cy="124.1" r="124.1"/>
 		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="41.6373" y1="196.384" x2="212.0317" y2="50.2232">
