@@ -166,6 +166,8 @@ header {
     background-repeat: no-repeat;
     background-position-x: 46.5%;
     background-position-y: 58%;
+}
+.active .waves-1{
     animation: waves1 3s linear;
 }
 @keyframes waves1 {
@@ -191,6 +193,8 @@ header {
     background-position-x: 35%;
     background-position-y: 39%;
     opacity: 0.3;
+}
+.active .waves-2 {
     animation: waves2 5s ease-out;
 }
 @keyframes waves2 {
@@ -220,6 +224,8 @@ header {
     background-position-x: 52%;
     background-position-y: 35%;
     opacity: 0.3;
+}
+.active .waves-3 {
     animation: waves3 5s ease-out;
 }
 @keyframes waves3 {
@@ -236,9 +242,6 @@ header {
         background-position-y: 35%;
     }
 }
-
-
-
 .top-rocket{
     width: 185px;
     width:  9.63vw;
@@ -273,6 +276,8 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-x: 6px;
+}
+.active .fire-big {
     animation: fire-big 5s ease-in-out ;
 }
 @keyframes fire-big {
@@ -303,8 +308,12 @@ header {
     background-size: 190%;
     background-position-x: 3px;
     background-position-y: -175px;
+}
+
+.active .fire-min {
     animation: fire-min 5s ease-in-out;
 }
+
 @keyframes fire-min {
     from {
         transform: translate(0px, 10px);
