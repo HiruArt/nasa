@@ -1653,6 +1653,7 @@ footer{
     .top-block .title .title__txt{
         padding-left: 0;
         margin-top: 60px;
+        width: 100%;
     }
 
     .top-block .title__txt:after {
@@ -1675,6 +1676,9 @@ footer{
     .title{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .video-block__left a:after {
@@ -1794,5 +1798,13 @@ footer{
 
     footer {
         background: white;
+    }
+
+    .footer__link{
+        text-align: center;
+    }
+
+    .footer__social a{
+        margin: 0 10px;
     }
 }
