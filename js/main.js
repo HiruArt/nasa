@@ -34,97 +34,101 @@ $(document).ready(function () {
     // };
 
 
-    var blocks = [];
-    var currentBlock = 0;
-    var scrollingFlag = false;
-    $('.scroll-block').each(function () {
-        blocks.push($(this).attr('data-id'));
-    });
+    if(window.innerWidth > 1024){
 
 
-    if(location.hash != ''){
-        var hash = location.hash.split('#')[1];
-
-        blocks.forEach(function (name, index) {
-            if(name == hash){
-                currentBlock = index;
-            }
+        var blocks = [];
+        var currentBlock = 0;
+        var scrollingFlag = false;
+        $('.scroll-block').each(function () {
+            blocks.push($(this).attr('data-id'));
         });
-        scrollingFlag = true;
-        setTimeout(function () {
-            $('html,body').animate({
-                scrollTop: $('[data-id="'+hash+'"]').offset().top
-            }, 900, function () {
-                scrollingFlag = false;
+
+
+        if(location.hash != ''){
+            var hash = location.hash.split('#')[1];
+
+            blocks.forEach(function (name, index) {
+                if(name == hash){
+                    currentBlock = index;
+                }
             });
-        },300);
-
-    }
-
-    $(window).on('mousewheel', function(e) {
-        if (scrollingFlag){
-            return;
-        }
-
-        var delta = e.originalEvent.deltaY;
-        var top = 50;
-        console.log(delta);
-
-        if (delta > 0){
-            if(currentBlock != blocks.length - 1){
-                currentBlock = currentBlock + 1;
-                scrollingFlag = true;
-                var t = 0;
-
-                if(currentBlock == 1){
-                    $('.top-block').addClass('active');
-                    t=1100;
-                }
-
-                if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
-                    top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
-                }
-
-                setTimeout(function () {
-
-
-                    console.log(currentBlock);
-                    $('html,body').animate({
-                        scrollTop: $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
-                    }, 900, function () {
-                        scrollingFlag = false;
-                        $('.top-block').removeClass('active');
-                    });
-                }, t);
-                location.hash = blocks[currentBlock];
-            }
-
-
-
-
-        }
-
-        else{
-            if(currentBlock != 0){
-                currentBlock = currentBlock - 1;
-                scrollingFlag = true;
-
-                if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
-                    top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
-                }
-
+            scrollingFlag = true;
+            setTimeout(function () {
                 $('html,body').animate({
-                    scrollTop:  $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+                    scrollTop: $('[data-id="'+hash+'"]').offset().top
                 }, 900, function () {
                     scrollingFlag = false;
                 });
+            },300);
 
-                location.hash = blocks[currentBlock];
-            }
         }
 
+        $(window).on('mousewheel', function(e) {
+            if (scrollingFlag){
+                return;
+            }
 
-    });
+            var delta = e.originalEvent.deltaY;
+            var top = 50;
+            console.log(delta);
+
+            if (delta > 0){
+                if(currentBlock != blocks.length - 1){
+                    currentBlock = currentBlock + 1;
+                    scrollingFlag = true;
+                    var t = 0;
+
+                    if(currentBlock == 1){
+                        $('.top-block').addClass('active');
+                        t=1100;
+                    }
+
+                    if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
+                        top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
+                    }
+
+                    setTimeout(function () {
+
+
+                        console.log(currentBlock);
+                        $('html,body').animate({
+                            scrollTop: $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+                        }, 900, function () {
+                            scrollingFlag = false;
+                            $('.top-block').removeClass('active');
+                        });
+                    }, t);
+                    location.hash = blocks[currentBlock];
+                }
+
+
+
+
+            }
+
+            else{
+                if(currentBlock != 0){
+                    currentBlock = currentBlock - 1;
+                    scrollingFlag = true;
+
+                    if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
+                        top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
+                    }
+
+                    $('html,body').animate({
+                        scrollTop:  $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+                    }, 900, function () {
+                        scrollingFlag = false;
+                    });
+
+                    location.hash = blocks[currentBlock];
+                }
+            }
+
+
+        });
+    }
 
 });
 
