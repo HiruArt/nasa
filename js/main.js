@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     AOS.init();
 
+    var rellax = new Rellax('.rellax');
 
     // document.getElementById('deleteme').onclick = function() {
     //     parallax.destroy();
@@ -53,7 +54,7 @@ $(document).ready(function () {
         setTimeout(function () {
             $('html,body').animate({
                 scrollTop: $('[data-id="'+hash+'"]').offset().top
-            }, 700, function () {
+            }, 900, function () {
                 scrollingFlag = false;
             });
         },300);
@@ -90,7 +91,7 @@ $(document).ready(function () {
                     console.log(currentBlock);
                     $('html,body').animate({
                         scrollTop: $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
-                    }, 700, function () {
+                    }, 900, function () {
                         scrollingFlag = false;
                         $('.top-block').removeClass('active');
                     });
@@ -114,7 +115,7 @@ $(document).ready(function () {
 
                 $('html,body').animate({
                     scrollTop:  $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
-                }, 700, function () {
+                }, 900, function () {
                     scrollingFlag = false;
                 });
 
