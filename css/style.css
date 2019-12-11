@@ -752,6 +752,10 @@ header {
     position: relative;
 }
 
+.fourth-block .stars{
+    top: 1000px;
+}
+
 .fourth-block .inner-block{
     height: auto;
     min-height: 530px;
