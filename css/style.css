@@ -1866,4 +1866,13 @@ footer{
         bottom: 55%;
         left: 21%;
     }
+    .stars {
+        background-image: url("../img/allstars-mobile-2.png");
+        background-repeat: repeat;
+        background-size: 122%;
+        background-position: center;
+    }
+    .third-block .stars {
+        display: none;
+    }
 }
