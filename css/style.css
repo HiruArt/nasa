@@ -457,7 +457,7 @@ header {
     top: 45%;
 }
 .star-5 {
-    bottom: -26%;
+    bottom: -4%;
     left: 43%;
 }
 .star-6 {
@@ -535,7 +535,7 @@ header {
     position: absolute;
     background: url("../img/animate/kometa.svg") center no-repeat;
     background-size: contain;
-    /*opacity: 0;*/
+    opacity: 0;
 }
 .animate.comet {
     animation: comet-down 1s linear;
@@ -767,6 +767,10 @@ header {
 }
 
 .second-block .title {
+}
+
+.second-block .stars{
+    top: 230px;
 }
 
 .video-block {
@@ -1258,6 +1262,14 @@ footer{
     position: absolute;
     left: 50% !important;
     top: 50% !important;
+}
+
+.planet-1,
+.planet-4,
+.planet-5,
+.planet-6 {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.18) 9px 6px 18px;
 }
 
 .planet-1{
@@ -1792,8 +1804,12 @@ footer{
         background-size: 100% 1266px;
 
         padding-top: 345px;
-        padding-bottom: 145px;
+        padding-bottom: 194px;
         margin-top: 100px;
+    }
+
+    .third-block {
+        padding-top: 50px;
     }
 
     .top-rocket {
@@ -1824,9 +1840,17 @@ footer{
         margin-top: 80px;
     }
 
+    .title--other .title__caption {
+        margin-top: 15px;
+        margin-bottom: 75px;
+    }
 
-    .footer__right {
+    .footer__right{
         margin-top: 25px;
+    }
+
+    footer {
+        background: white;
     }
 
     .third-block {

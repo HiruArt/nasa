@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -92,7 +93,7 @@
                     <div class="video-block">
                         <div class="video-block__top">
                             <div class="video-block__left" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1500">
-                                <a href="#">
+                                <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/2E7l9rZ0cQY" href="javascript:;">
                                     <img src="./img/video-img.jpg" alt="img">
                                 </a>
                             </div>
@@ -134,7 +135,7 @@
                     <div class="star-solo star-light star-6 star-min"></div>
                 </div>
                 <div class="comets">
-                    <div class="comet comet-1 animate"></div>
+                    <div class="comet comet-1 "></div>
                     <div class="comet comet-2"></div>
                     <div class="comet comet-3"></div>
                     <div class="comet comet-4"></div>
@@ -230,9 +231,12 @@
                             Создать глобальную команду и заработать на достойную <br>
                             жизнь теперь проще, чем когда-либо!
                         </div>
-                        <a href="#" class="button-site button-site--other" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1500">
-                            Подключить систему
-                        </a>
+                        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="1500">
+                            <a href="#" class="button-site button-site--other">
+                                Подключить систему
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -332,6 +336,7 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/rellax.min.js"></script>
 
     <script src="js/main.js"></script>

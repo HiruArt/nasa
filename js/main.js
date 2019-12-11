@@ -130,6 +130,38 @@ $(document).ready(function () {
         });
     }
 
+    var stars = $('.star-solo').length;
+    var comets = $('.comet').length;
+
+    setInterval(function () {
+        var random = randomInteger(0, stars);
+
+        $('.star-solo').eq(random).addClass('animate');
+
+        setTimeout(function () {
+            $('.star-solo').eq(random).removeClass('animate');
+        }, 1000);
+
+    }, 500);
+
+
+    setInterval(function () {
+        var random = randomInteger(0, stars);
+
+        $('.comet').eq(random).addClass('animate');
+
+        setTimeout(function () {
+            $('.comet').eq(random).removeClass('animate');
+        }, 1000);
+
+    }, 500);
+
+    function randomInteger(min, max) {
+        // случайное число от min до (max+1)
+        let rand = min + Math.random() * (max + 1 - min);
+        return Math.floor(rand);
+    }
+
 
 
 });
