@@ -986,14 +986,14 @@ header {
 .fourth-block:after {
     content: "";
     position: absolute;
-    width: 50vw;
-    height: 50vw;
+    width: 85vw;
+    height: 85vw;
     background-color: transparent;
     background-image: radial-gradient( circle closest-side, white, transparent );
-    top: -30%;
+    top: -95%;
     opacity: 0.5;
     z-index: 0;
-    left: -2%;
+    left: -20%;
 }
 
 .fourth-block .stars{
@@ -1048,7 +1048,7 @@ header {
     left: 14%;
     transform: rotate(35deg);
     z-index: 1;
-    animation: bottom-rocket 15s linear infinite;
+    animation: bottom-rocket 20s linear infinite;
 }
 
 .bottom-rocket:before{
@@ -1064,18 +1064,43 @@ header {
 @keyframes bottom-rocket {
     0% {
         transform: translate(-359%, 183%) rotate(35deg);
+        opacity: 0;
     }
-    45% {
+    2% {
+        transform: translate(-349%, 173%) rotate(35deg);
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+        transform: translate(+320%, -210%) rotate(35deg);
+    }
+    37% {
+        opacity: 0;
         transform: translate(+380%, -250%) rotate(35deg);
     }
     50%{
+        opacity: 0;
         transform: translate(+380%, -250%) rotate(90deg);
     }
-    55% {
+    73% {
+        opacity: 0;
         transform: translate(+550%, -250%) rotate(150deg);
+    }
+    75% {
+        opacity: 1;
+        transform: translate(+590%, -200%) rotate(150deg);
+    }
+    95% {
+        transform: translate(+990%, 150%) rotate(150deg);
+        opacity: 1;
+    }
+    98% {
+        transform: translate(+1020%, 165%) rotate(150deg);
+        opacity: 0;
     }
     100% {
         transform: translate(+1050%, 182%) rotate(150deg);
+        opacity: 0;
     }
 }
 
@@ -1499,6 +1524,10 @@ footer{
         height: 135%;
         width: 105%;
     }
+    .second-block:after {
+        top: -156%;
+        right: -89%;
+    }
 
 }
 
@@ -1594,6 +1623,7 @@ footer{
 
     .third-block{
         text-align: center;
+        min-height: 840px;
     }
 
     .title__txt:after{
@@ -1614,6 +1644,17 @@ footer{
     .about-us__item .about-us__item-txt {
         text-align: left;
     }
+    .second-block:after {
+        top: -70%;
+        right: -100%;
+    }
+    .fourth-block:before {
+        top: -250%;
+    }
+    .fourth-block:after{
+        top: -55%;
+        left: -30%;
+    }
 }
 
 @media (max-width: 560px) {
@@ -1626,7 +1667,7 @@ footer{
 
 
 @media (max-width: 500px) {
-    .header{
+    .header {
         margin-top: 0;
         height: 65px;
         display: flex;
@@ -1634,23 +1675,32 @@ footer{
         align-items: center;
     }
 
-    header{
+    header {
         border-bottom: 1px solid #e8e8e8;
     }
 
-    .header__inner{
+    .header__inner {
         width: 100%;
     }
 
-    .register{
+    .register {
         display: none;
     }
 
-    .login{
+    .login {
         margin-right: 0;
     }
 
-    .top-block .title .title__txt{
+    .title__txt {
+        max-width: 100% !important;
+        font-size: 28px;
+    }
+
+    .title__txt br {
+        display: none;
+    }
+
+    .top-block .title .title__txt {
         padding-left: 0;
         margin-top: 60px;
         width: 100%;
@@ -1661,19 +1711,19 @@ footer{
         margin-left: 0;
     }
 
-    .top-block .title .title__txt br ~ br{
+    .top-block .title .title__txt br ~ br {
         display: block;
     }
 
-    .title__caption{
+    .title__caption {
         max-width: 100%;
     }
 
-    .top-block .title__caption{
+    .top-block .title__caption {
         margin-bottom: 40px;
     }
 
-    .title{
+    .title {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1686,12 +1736,12 @@ footer{
         height: 50px;
     }
 
-    .about-us__list{
+    .about-us__list {
         display: flex;
         flex-direction: column;
     }
 
-    .about-us__item{
+    .about-us__item {
         width: 100%;
         margin-bottom: 24px;
     }
@@ -1721,20 +1771,27 @@ footer{
 
     .third-block:after,
     .third-block:before,
+    .fourth-block:before,
+    .fourth-block:after,
+    .second-block:after,
     .bitkoin,
+    .planet-1,
+    .planet-4,
+    .planet-6,
     .waves-1,
     .waves-2,
-    .waves-3{
+    .waves-3 {
         background: unset;
-        display: none;
+        display: none !important;
     }
 
-    .footer{
+
+    .footer {
         background: unset;
         padding-bottom: 65px;
     }
 
-    .top-rocket{
+    .top-rocket {
         width: 135px;
         height: 325px;
         transform: rotate(0) translateX(-50%);
@@ -1742,13 +1799,13 @@ footer{
         margin-left: 0;
     }
 
-    .top-block{
+    .top-block {
         overflow: visible;
     }
 
-    .second-block{
+    .second-block {
         background: url(../img/mob-t-bg.png) top center no-repeat;
-        background-size: 100% 1266px;
+        background-size: 100% 1200px;
 
         padding-top: 345px;
         padding-bottom: 194px;
@@ -1775,11 +1832,11 @@ footer{
         margin-top: 40px;
     }
 
-    .page-wrap{
+    .page-wrap {
         background: transparent;
     }
 
-    .fourth-block{
+    .fourth-block {
         padding-top: 170px;
         padding-bottom: 230px;
         background: url(../img/mob-f-bg.png) top center no-repeat;
@@ -1800,11 +1857,48 @@ footer{
         background: white;
     }
 
+    .third-block {
+        min-height: 700px;
+    }
+
+    .footer__right {
+        text-align: center;
+    }
+
+    .bottom-rocket {
+        position: absolute;
+        bottom: 55%;
+        left: 21%;
+    }
+    .stars {
+        background-image: url("../img/allstars-mobile-2.png");
+        background-repeat: repeat;
+        background-size: 122%;
+        background-position: center;
+    }
+    .third-block .stars {
+        display: none;
+    }
+
     .footer__link{
         text-align: center;
     }
 
     .footer__social a{
         margin: 0 10px;
+    }
+
+    .second-block .stars {
+        top: 429px;
+        height: 900px;
+    }
+
+    .comet{
+        width: 10.989583vw;
+        height: 10.208333vw;
+    }
+
+    .comets{
+        top: 255px;
     }
 }
