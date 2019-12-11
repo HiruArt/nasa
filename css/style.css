@@ -1901,4 +1901,8 @@ footer{
     .comets{
         top: 255px;
     }
+
+    .third-block .button-site {
+        margin-bottom: 21px;
+    }
 }
