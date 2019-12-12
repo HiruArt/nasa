@@ -224,6 +224,7 @@ header {
 
 .button-site.register {
     padding: 25px 15px;
+    
     padding: 1.3vw 0.78vw;
     font-size: 16px;
     font-size: 0.83vw;
@@ -623,6 +624,22 @@ header {
     left: 0;
     top: 0;
     z-index: 0;
+
+    width: 100%;
+    height: 100%;
+    /*background-image: url(../img/stars.png);*/
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.comets-2-screen {
+    background-image: url(../img/comets-2screen.png);
+}
+.comets-3-screen {
+    background-image: url(../img/comets-3screen.png);
+}
+.comets-4-screen {
+    background-image: url(../img/comets-4screen.png);
 }
 .comet {
     width: 5.989583333333334vw;
@@ -1026,6 +1043,19 @@ header {
     z-index: 10;
     background: url(../img/FX2.png) center center no-repeat;
     background-size: contain;
+    animation: pulsing 7s infinite;
+}
+
+@keyframes pulsing {
+    0% {
+        transform: scale(0.9, 0.9) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.0, 1.0) translateX(+3%) rotate(10deg);
+    }
+    100% {
+        transform: scale(0.9, 0.9) translateX(0) rotate(0deg);
+    }
 }
 
 .third-block .title {
@@ -1089,7 +1119,7 @@ header {
     width: 100vw;
     height: 100vw;
     background-color: transparent;
-    background-image: radial-gradient( circle closest-side, white, transparent );
+    /*background-image: radial-gradient( circle closest-side, white, transparent );*/
     top: -340%;
     opacity: 0.5;
     z-index: 0;
@@ -1101,7 +1131,7 @@ header {
     width: 85vw;
     height: 85vw;
     background-color: transparent;
-    background-image: radial-gradient( circle closest-side, white, transparent );
+    /*background-image: radial-gradient( circle closest-side, white, transparent );*/
     top: -95%;
     opacity: 0.5;
     z-index: 0;
