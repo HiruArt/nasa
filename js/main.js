@@ -25,13 +25,13 @@ $(document).ready(function () {
 
     var rellax = new Rellax('.rellax');
 
-    // document.getElementById('deleteme').onclick = function() {
-    //     parallax.destroy();
-    //     parallax = null;
-    //
-    //     this.onclick = null;
-    //     this.style.display = 'none';
-    // };
+    document.getElementById('deleteme').onclick = function() {
+        parallax.destroy();
+        parallax = null;
+
+        this.onclick = null;
+        this.style.display = 'none';
+    };
 
     var ts;
     $(window).on('touchstart', function (e) {
@@ -235,7 +235,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             $('.comet').eq(random).removeClass('animate');
-        }, 1000);
+        }, 7000);
 
     }, 500);
 

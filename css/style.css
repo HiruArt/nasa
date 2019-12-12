@@ -505,7 +505,6 @@ header {
     width: 1.09375vw;
     height: 21px;
     height: 1.09375vw;
-    /*background-image: url(../img/animate/star1.png);*/
     background-repeat: no-repeat;
     background-size: contain;
     transform: scale(0);
@@ -526,60 +525,60 @@ header {
     animation: star-blick-min 1s linear;
 }
 .star-1 {
-    bottom: 40%;
-    right: 20%;
+    bottom: 18%;
+    right: 25%;
 }
 .star-2 {
-    bottom: 11%;
-    left: 50%;
+    bottom: 7%;
+    left: 65%;
 }
 .star-3 {
-    bottom: 22%;
-    right: 2%;
+    bottom: 44%;
+    right: 4%;
 }
 .star-4 {
-    left: 35%;
+    left: 51%;
     top: 45%;
 }
 .star-5 {
-    bottom: -4%;
-    left: 43%;
+    top: 54%;
+    left: 5%;
 }
 .star-6 {
-    right: 30%;
-    bottom: -8%;
+    right: 11%;
+    top: 35%;
 }
 .star-7 {
-    right: 2%;
-    top: 30%;
+    right: 13%;
+    top: 42%;
 }
 .star-8 {
-     right: 3%;
-     bottom: 25%;
+    right: 33%;
+    bottom: -14%;
 }
 .star-9 {
-    left: 35%;
-    bottom: -20%;
+    left: 47%;
+    top: 28%;
 }
 .star-10 {
-    top: -4%;
-    right: 23%;
+    top: 50%;
+    right: 20%;
 }
 .star-11 {
-    left: 35%;
-    bottom: 32%;
+    left: 36%;
+    top: 47%;
 }
 .star-12 {
-    left: 43%;
-    top: 38%;
+    right: 36%;
+    top: 70%;
 }
 .star-13 {
-    top: 40%;
-    left: 4%;
+    top: 54%;
+    left: 17%;
 }
 .star-14 {
-    top: 40%;
-    right: 3%;
+    top: 81%;
+    right: 34%;
 }
 
 @keyframes star-blick {
@@ -614,7 +613,6 @@ header {
     z-index: 0;
 }
 .comet {
-    width: 115px;
     width: 5.989583333333334vw;
     height: 5.208333333333334vw;
     position: absolute;
@@ -623,41 +621,41 @@ header {
     opacity: 0;
 }
 .animate.comet {
-    animation: comet-down 1s linear;
+    animation: comet-down 7s linear;
 }
 .comet-1 {
-    left: 15%;
-    top: 10%;
+    left: 7%;
+    top: 70%;
 }
 .comet-2 {
-    left: 25%;
-    top: 13%;
+    left: 71%;
+    top: 65%;
     width: 3.989583vw;
     height: 3.208333vw;
 }
 .comet-3 {
-    left: 13%;
-    top: 12%;
+    left: 29%;
+    top: 86%;
     width: 3.989583vw;
     height: 3.208333vw;
 }
 .comet-4 {
-    right: 25%;
-    bottom: 5%;
+    right: 10%;
+    top: 49%;
 }
 .comet-5 {
-    right: 21%;
-    bottom: 5%;
+    right: 43%;
+    bottom: 35%;
     width: 2.989583vw;
     height: 2.208333vw;
 }
 .comet-6 {
-    right: 8%;
-    top: -5%;
+    right: 35%;
+    top: -31%;
 }
 .comet-7 {
-    right: 9%;
-    top: -20%;
+    left: 15%;
+    top: 15%;
     width: 3.989583vw;
     height: 3.208333vw;
 }
@@ -668,38 +666,44 @@ header {
     height: 2.208333vw;
 }
 .comet-9 {
-    bottom: 36%;
-    left: 4%;
+    bottom: -9%;
+    left: 23%;
     width: 2.989583vw;
     height: 2.208333vw;
 }
 .comet-10 {
-    bottom: 11%;
-    left: 9%;
+    top: 67%;
+    right: 28%;
     width: 2.989583vw;
     height: 2.208333vw;
 }
 
 @keyframes comet-down {
     from {
-        transform: translate(-100%, -100%) scale(0.3);
+        transform: translate(-1000%, -1000%) scale(0.3);
         opacity: 0;
+        width: 5.989583333333334vw;
+        height: 5.208333333333334vw;
     }
     25% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-500%, -500%) scale(1);
         opacity: 1;
     }
     50% {
         transform: translate(0%, 0%) scale(0.8);
         opacity: 1;
+        width: 6.989583333333334vw;
+        height: 6.208333333333334vw;
     }
     75% {
-        transform: translate(50%, 50%) scale(0.5);
+        transform: translate(500%, 500%) scale(0.5);
         opacity: 0.7;
     }
     to {
-        transform: translate(100%, 100%) scale(0);
+        transform: translate(1000%, 1000%) scale(0);
         opacity: 0;
+        width: 5.989583333333334vw;
+        height: 5.208333333333334vw;
     }
 }
 
@@ -769,7 +773,7 @@ header {
     min-width: 200px;
     min-width: 10.416vw;
     display: inline-block;
-    font-family: 'interstate', monospace;
+    /*font-family: 'interstate', monospace;*/
     color: white;
     text-align: center;
     text-decoration: none;
@@ -983,21 +987,32 @@ header {
     z-index: 5;
 }
 
-.third-block:after{
-    content: "";
-    display: block;
-    position: absolute;
-    right: 190px;
-    right: 9.895833333333334vw;
-    bottom: 320px;
-    bottom: 16.666666666666668vw;
+/*.third-block:after{*/
+    /*content: "";*/
+    /*display: block;*/
+    /*position: absolute;*/
+    /*right: 190px;*/
+    /*right: 9.895833333333334vw;*/
+    /*bottom: 320px;*/
+    /*bottom: 16.666666666666668vw;*/
 
-    width: 480px;
-    width: 25vw;
-    height: 870px;
-    height: 45.31vw;
+    /*width: 480px;*/
+    /*width: 25vw;*/
+    /*height: 870px;*/
+    /*height: 45.31vw;*/
+    /*z-index: 10;*/
+    /*background: url("../img/FX.png") center center no-repeat;*/
+    /*background-size: contain;*/
+/*}*/
+
+.big-phone {
+    position: absolute;
+    right: -8%;
+    bottom: -26%;
+    width: 34.5vw;
+    height: 51.31vw;
     z-index: 10;
-    background: url("../img/FX.png") center center no-repeat;
+    background: url(../img/FX2.png) center center no-repeat;
     background-size: contain;
 }
 
@@ -1132,7 +1147,7 @@ header {
     bottom: -24%;
     left: 14%;
     transform: rotate(35deg);
-    z-index: 1;
+    z-index: 2;
     animation: bottom-rocket 20s linear infinite;
 }
 
@@ -1143,8 +1158,21 @@ header {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/animate/rocket.svg) center center no-repeat;
+    background: url(../img/animate/bottom-rocket-img.png) center center no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+.bottom-rocket:after {
+    content: "";
+    position: absolute;
+    left: 27%;
+    width: 38%;
+    height: 70%;
     z-index: 0;
+    top: 20%;
+    background: rgba(39, 56, 117, 0.34);
+    border-radius: 30%;
+    box-shadow: 33px 41px 63px 40px rgba(39, 56, 117, 0.64);
 }
 @keyframes bottom-rocket {
     0% {
@@ -1202,7 +1230,7 @@ header {
     background-size: 100%;
     background-position-x: 6px;
     background-position-x: 0.375vw;
-    z-index: -1;
+    z-index: 1;
     visibility: hidden;
 }
 .bottom-rocket .fire-big {
@@ -1223,7 +1251,7 @@ header {
     background-size: 204%;
     background-position-x: 0.1875vw;
     background-position-y: -7vw;
-    z-index: -1;
+    z-index: 1;
     visibility: hidden;
 }
 .bottom-rocket .fire-min {
@@ -1925,7 +1953,7 @@ footer{
     .fourth-block {
         padding-top: 170px;
         padding-bottom: 230px;
-        background: url(../img/mob-f-bg.png) top center no-repeat;
+        background: url(../img/mob-f-bg2.png) top center no-repeat;
         background-size: 100% 739px;
         margin-top: 80px;
     }
