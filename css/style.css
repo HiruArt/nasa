@@ -227,7 +227,7 @@ header {
 .header__logo img {
     display: inline-flex;
     width: 200px;
-    width: 10.416vw;
+    width: 11.416vw;
 }
 
 .header__right {
@@ -249,7 +249,7 @@ header {
 
 .button-site.register {
     padding: 25px 15px;
-    padding: 1.3vw 0.78vw;
+    padding: 1.3vw 2vw;
     font-size: 16px;
     font-size: 0.83vw;
 }
@@ -388,16 +388,16 @@ header {
 }
 .top-rocket{
     width: 185px;
-    width:  9.63vw;
+    width: 10.63vw;
     height: 430px;
-    height: 22.39vw;
+    height: 23.39vw;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: 28px;
-    margin-top: -19.542vw;
+    margin-top: -22.5vw;
     margin-left: 147px;
-    margin-left: 7.656vw;
+    margin-left: 6.5vw;
     transform: rotate(-34deg);
     z-index: 20;
 }
@@ -438,7 +438,7 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position-x: 6px;
-    background-position-x: 0.375vw;
+    background-position-x: 0;
     z-index: 0;
     visibility: hidden;
 }
@@ -491,7 +491,7 @@ header {
     height: 6.125vw;
     right: 45px;
     /*right: 2.8125vw;*/
-    right: 1.9vw;;
+    right: 2.34375vw;;
     bottom: -70px;
     bottom:  -4.375vw;
     background-image: url(../img/animate/fire.svg);
@@ -676,6 +676,8 @@ header {
 }
 .comets-4-screen {
     background-image: url(../img/comets-4screen.png);
+    top: -75%;
+    height: 150%;
 }
 .comet {
     width: 5.989583333333334vw;
@@ -792,8 +794,8 @@ header {
     content: "";
     width: 100px;
     position: absolute;
-    bottom: -25px;
-    left: -50px;
+    bottom: -19px;
+    left: -38px;
     height: 7px;
     background: #00b2ff;
     border-radius: 4px;
@@ -804,8 +806,8 @@ header {
     max-width: 730px;
     max-width: 38.020833333333336vw;
     padding-top: 45px;
-    padding-top: 3.5046728971962615vw;
-    margin-bottom: 3.8940809968847354vw;
+    padding-top: 2vw;
+    margin-bottom: 2.37vw;
 
     font-size: 24px;
     font-size: 1.25vw;
@@ -834,7 +836,7 @@ header {
 .button-site {
     background: #00b2ff;
     padding: 30px 60px;
-    padding: 1.56vw 3.125vw;
+    padding: 1.56vw 2.3vw;
     min-width: 200px;
     min-width: 10.416vw;
     display: inline-block;
@@ -1030,7 +1032,7 @@ header {
 .third-block {
     position: relative;
     padding-top: 420px;
-    padding-top: 21.87vw;
+    padding-top: 24.3vw;
     min-height: 1780px;
     min-height: 92.7vw;
 
@@ -1191,7 +1193,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 3.7vw;
 }
 
 .title--other .title__txt {
@@ -1371,7 +1373,7 @@ footer{
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    margin-bottom: 2.6vh;
+    margin-bottom: 1.6vh;
 }
 
 .footer__social a {
