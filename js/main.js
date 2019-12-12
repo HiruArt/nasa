@@ -33,101 +33,184 @@ $(document).ready(function () {
     //     this.style.display = 'none';
     // };
 
+    var ts;
+    $(window).on('touchstart', function (e) {
+        ts = $(document).scrollTop();
+    });
 
     if(window.innerWidth > 1024){
 
+        var animTop = false;
+        flagScroll = false;
 
-        var blocks = [];
-        var currentBlock = 0;
-        var scrollingFlag = false;
-        $('.scroll-block').each(function () {
-            blocks.push($(this).attr('data-id'));
-        });
+        $(window).on('touchmove mousewheel wheel', function (e) {
 
+            if (flagScroll) return;
 
-        if(location.hash != ''){
-            var hash = location.hash.split('#')[1];
+            let height = this.innerHeight;
+            let scroll = this.pageYOffset;
+            let scrollDelta = e.originalEvent.deltaY;
 
-            blocks.forEach(function (name, index) {
-                if(name == hash){
-                    currentBlock = index;
-                }
-            });
-            scrollingFlag = true;
-            setTimeout(function () {
-                $('html,body').animate({
-                    scrollTop: $('[data-id="'+hash+'"]').offset().top
-                }, 900, function () {
-                    scrollingFlag = false;
-                });
-            },300);
-
-        }
-
-        $(window).on('mousewheel', function(e) {
-            if (scrollingFlag){
-                return;
-            }
+            var secondBlock = $('.second-block').offset().top;
 
             var delta = e.originalEvent.deltaY;
-            var top = 50;
-            console.log(delta);
-
-            if (delta > 0){
-                if(currentBlock != blocks.length - 1){
-                    currentBlock = currentBlock + 1;
-                    scrollingFlag = true;
-                    var t = 0;
-
-                    if(currentBlock == 1){
-                        $('.top-block').addClass('active');
-                        t=1100;
-                    }
-
-                    if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
-                        top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
-                    }
-
-                    setTimeout(function () {
 
 
-                        console.log(currentBlock);
-                        $('html,body').animate({
-                            scrollTop: $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
-                        }, 900, function () {
-                            scrollingFlag = false;
-                            $('.top-block').removeClass('active');
-                        });
-                    }, t);
-                    location.hash = blocks[currentBlock];
-                }
+            if (delta > 0 && animTop == false){
 
 
+                flagScroll = true;
+                animTop = true;
 
+                $('.page-wrap').addClass('top-animate');
 
-            }
+                setTimeout(function () {
 
-            else{
-                if(currentBlock != 0){
-                    currentBlock = currentBlock - 1;
-                    scrollingFlag = true;
-
-                    if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
-                        top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
-                    }
-
+                    $('body').addClass('page--scroll');
                     $('html,body').animate({
-                        scrollTop:  $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+                        scrollTop: $('.second-block').offset().top
                     }, 900, function () {
-                        scrollingFlag = false;
+                        flagScroll = false;
+                    });
+                },500);
+
+                setTimeout(function () {
+                    $('.page-wrap').removeClass('top-animate');
+                    $('.page-wrap').addClass('top');
+                }, 3000);
+
+
+
+                // }
+
+            } else {
+                if(scroll < secondBlock - 100 && flagScroll == false){
+                    console.log(222);
+                    animTop = false;
+                    flagScroll = true;
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 900, function () {
+
+                        $('body').removeClass('page--scroll');
+                        $('.page-wrap').addClass('top-show');
+                        setTimeout(function () {
+                            $('.page-wrap').removeClass('top');
+                            $('.page-wrap').removeClass('top-show');
+                            flagScroll = false;
+                        },500)
                     });
 
-                    location.hash = blocks[currentBlock];
+
                 }
+                // if (scroll == 0) {
+                //     flagScroll = true;
+                //     setTimeout(function () {
+                //         flagScroll = false;
+                //     }, 500);
+                //
+                //     $('.full-block').removeClass('hide-top');
+                //     $('header').removeClass('fixed');
+                //     $('body').addClass('page--hidden');
+                // }
+
             }
 
 
         });
+
+
+        // var blocks = [];
+        // var currentBlock = 0;
+        // var scrollingFlag = false;
+        // $('.scroll-block').each(function () {
+        //     blocks.push($(this).attr('data-id'));
+        // });
+
+
+        // if(location.hash != ''){
+        //     var hash = location.hash.split('#')[1];
+        //
+        //     blocks.forEach(function (name, index) {
+        //         if(name == hash){
+        //             currentBlock = index;
+        //         }
+        //     });
+        //     scrollingFlag = true;
+        //     setTimeout(function () {
+        //         $('html,body').animate({
+        //             scrollTop: $('[data-id="'+hash+'"]').offset().top
+        //         }, 900, function () {
+        //             scrollingFlag = false;
+        //         });
+        //     },300);
+        //
+        // }
+
+        // $(window).on('mousewheel', function(e) {
+        //     if (scrollingFlag){
+        //         return;
+        //     }
+        //
+        //     var delta = e.originalEvent.deltaY;
+        //     var top = 50;
+        //     console.log(delta);
+        //
+        //     if (delta > 0){
+        //         if(currentBlock != blocks.length - 1){
+        //             currentBlock = currentBlock + 1;
+        //             scrollingFlag = true;
+        //             var t = 0;
+        //
+        //             if(currentBlock == 1){
+        //                 $('.top-block').addClass('active');
+        //                 t=1100;
+        //             }
+        //
+        //             if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
+        //                 top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
+        //             }
+        //
+        //             setTimeout(function () {
+        //
+        //
+        //                 console.log(currentBlock);
+        //                 $('html,body').animate({
+        //                     scrollTop: $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+        //                 }, 900, function () {
+        //                     scrollingFlag = false;
+        //                     $('.top-block').removeClass('active');
+        //                 });
+        //             }, t);
+        //             location.hash = blocks[currentBlock];
+        //         }
+        //
+        //
+        //
+        //
+        //     }
+        //
+        //     else{
+        //         if(currentBlock != 0){
+        //             currentBlock = currentBlock - 1;
+        //             scrollingFlag = true;
+        //
+        //             if($('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')){
+        //                 top = $('[data-id="'+blocks[currentBlock]+'"]').attr('data-pixel')
+        //             }
+        //
+        //             $('html,body').animate({
+        //                 scrollTop:  $('[data-id="'+blocks[currentBlock]+'"]').offset().top - top
+        //             }, 900, function () {
+        //                 scrollingFlag = false;
+        //             });
+        //
+        //             location.hash = blocks[currentBlock];
+        //         }
+        //     }
+        //
+        //
+        // });
     }
 
     var stars = $('.star-solo').length;
