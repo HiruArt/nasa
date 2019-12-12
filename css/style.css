@@ -73,6 +73,11 @@ body {
     overflow-x: hidden;
 }
 
+main{
+    position: relative;
+    z-index: 10;
+}
+
 .page--scroll{
     position: static;
 }
@@ -91,8 +96,9 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/bbg.jpg) top left no-repeat;
+    background: url(../img/bbg1.jpg) top left no-repeat;
     background-size: 100%;
+    z-index: 1;
 }
 
 .page-wrap:before {
@@ -100,16 +106,16 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 1940px;
-    width: 100%;
-    background: url(../img/b5.png) top left no-repeat;
+    height: 2573px;
+    width: 2200px;
+    background: url(../img/bggt.png) top left no-repeat;
     background-size: auto 100%;
-    z-index: 1;
+    z-index: 5;
     transition: 0.5s;
 }
 
 .page-wrap.top-animate:before{
-    animation: opacity 2s;
+    animation: opacity 3s;
     animation-fill-mode: forwards;
 }
 
@@ -128,22 +134,29 @@ body {
 @keyframes opacity {
     0% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) translateX(0);
     }
-    50% {
-        transform: translateY(-373px);
+
+    40%{
+        transform: translateY(-373px) translateX(-150px);
         opacity: 1;
     }
-    75%{
-        opacity: 0;
+    43% {
+        transform: translateY(-373px) translateX(-150px);
+        opacity: 0.4;
     }
-    80%{
+
+    50% {
+        transform: translateY(-373px) translateX(-150px);
+        opacity: 0.2;
+    }
+    60%{
+        transform: translateY(-373px) translateX(-150px);
         opacity: 0;
-        transform: translateY(-373px);
     }
     100% {
         opacity: 0;
-        transform: translateY(-373px);
+        transform: translateY(-373px) translateX(-150px);
         /*transform: translateY(0);*/
     }
 
@@ -239,7 +252,6 @@ header {
     min-height: 740px;
     position: relative;
 
-    background: white;
     position: relative;
     overflow: hidden;
 }
@@ -800,7 +812,7 @@ header {
     background: #35bffb;
     mix-blend-mode: color-burn;
     top: 20px;
-    top: calc(100px - 4vw);
+    top: calc(100px - 3vw);
     z-index: -1;
     border-radius: 230px;
     transition: transform 3.2s, background 6s;
