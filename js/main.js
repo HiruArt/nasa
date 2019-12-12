@@ -63,7 +63,7 @@ $(document).ready(function () {
                 animTop = true;
 
                 $('.page-wrap').addClass('top-animate');
-                $('.waves').addClass('active ');
+                $('.page-wrap').addClass('active ');
 
                 setTimeout(function () {
 
@@ -71,14 +71,22 @@ $(document).ready(function () {
                     $('html,body').animate({
                         scrollTop: $('.second-block').offset().top
                     }, 900, function () {
-                        flagScroll = false;
                     });
                 },600);
 
                 setTimeout(function () {
+                    $('.page-wrap').removeClass('active ');
+                }, 1500);
+
+                setTimeout(function () {
                     $('.page-wrap').removeClass('top-animate');
                     $('.page-wrap').addClass('top');
-                }, 3000);
+                    flagScroll = false;
+                }, 2000);
+
+                setTimeout(function () {
+                    $('.page-wrap').removeClass('top');
+                }, 2200);
 
 
 
@@ -96,7 +104,7 @@ $(document).ready(function () {
                         $('body').removeClass('page--scroll');
                         $('.page-wrap').addClass('top-show');
                         $('.page-wrap').removeClass('top');
-                        $('.waves').removeClass('active ');
+                        $('.page-wrap').removeClass('active ');
                         setTimeout(function () {
 
 
@@ -232,7 +240,7 @@ $(document).ready(function () {
             $('.star-solo').eq(random).removeClass('animate');
         }, 1000);
 
-    }, 500);
+    }, 5000);
 
 
     setInterval(function () {
@@ -244,7 +252,7 @@ $(document).ready(function () {
             $('.comet').eq(random).removeClass('animate');
         }, 7000);
 
-    }, 500);
+    }, 5000);
 
     function randomInteger(min, max) {
         // случайное число от min до (max+1)
