@@ -63,6 +63,7 @@ $(document).ready(function () {
                 animTop = true;
 
                 $('.page-wrap').addClass('top-animate');
+                $('.waves').addClass('active ');
 
                 setTimeout(function () {
 
@@ -72,7 +73,7 @@ $(document).ready(function () {
                     }, 900, function () {
                         flagScroll = false;
                     });
-                },500);
+                },600);
 
                 setTimeout(function () {
                     $('.page-wrap').removeClass('top-animate');
@@ -94,11 +95,17 @@ $(document).ready(function () {
 
                         $('body').removeClass('page--scroll');
                         $('.page-wrap').addClass('top-show');
+                        $('.page-wrap').removeClass('top');
+                        $('.waves').removeClass('active ');
                         setTimeout(function () {
-                            $('.page-wrap').removeClass('top');
+
+
+                        },500);
+                        setTimeout(function () {
                             $('.page-wrap').removeClass('top-show');
                             flagScroll = false;
-                        },500)
+                        },1000);
+
                     });
 
 

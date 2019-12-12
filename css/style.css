@@ -115,7 +115,7 @@ main{
 }
 
 .page-wrap.top-animate:before{
-    animation: opacity 3s;
+    animation: opacity 3.3s;
     animation-fill-mode: forwards;
 }
 
@@ -130,6 +130,21 @@ main{
 .page-wrap.top-show{
     opacity: 1;
 }
+
+.top-animate .waves{
+    animation: opacity 3s;
+    animation-fill-mode: forwards;
+}
+
+.page-wrap.top .waves{
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.page-wrap.top-show .waves{
+    opacity: 1;
+}
+
 
 @keyframes opacity {
     0% {
@@ -161,6 +176,16 @@ main{
     }
 
 }
+
+/*.top-animate .waves .waves-2{*/
+    /*background-position-x: 7%;*/
+    /*background-position-y: 53%;*/
+/*}*/
+
+/*.top-animate .waves .waves-3{*/
+    /*background-position-x: 7%;*/
+    /*background-position-y: 53%;*/
+/*}*/
 
 /*@keyframes opacity2 {*/
     /*from{*/
@@ -256,6 +281,18 @@ header {
     overflow: hidden;
 }
 
+.waves{
+    position: absolute;
+    width: 100%;
+    top: -81px;
+    left: -11px;
+    height: 130vh;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+
+
 .waves-1 {
     /*background-image: url("../img/animate/wave1-1.svg");*/
     position: absolute;
@@ -271,7 +308,7 @@ header {
     z-index: 20;
 }
 .active .waves-1{
-    animation: waves1 3s linear;
+    animation: waves1 2s linear;
 }
 @keyframes waves1 {
     from {
@@ -284,22 +321,22 @@ header {
     }
 }
 .waves-2 {
-    /*background-image: url("../img/animate/wave2.svg");*/
+    background-image: url(../img/animate/wave2.svg);
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 106%;
+    width: 106%;
     display: flex;
     top: 0;
     left: 0;
-    background-size: 157%;
+    background-size: 145%;
     background-repeat: no-repeat;
-    background-position-x: 35%;
+    background-position-x: 34%;
     background-position-y: 39%;
     opacity: 0.3;
     z-index: 5;
 }
 .active .waves-2 {
-    animation: waves2 5s ease-out;
+    animation: waves2 2s ease-out;
 }
 @keyframes waves2 {
     from {
@@ -316,7 +353,7 @@ header {
     }
 }
 .waves-3 {
-    /*background-image: url("../img/animate/wave3.svg");*/
+    background-image: url("../img/animate/wave3.svg");
     position: absolute;
     height: 115%;
     width: 106%;
@@ -332,7 +369,7 @@ header {
     z-index: 10;
 }
 .active .waves-3 {
-    animation: waves3 5s ease-out;
+    animation: waves3 2s ease-out;
 }
 @keyframes waves3 {
     from {
