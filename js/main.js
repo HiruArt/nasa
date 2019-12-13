@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if(window.innerWidth > 600) {
+    if(window.innerWidth > 1024) {
         var scene = document.getElementsByClassName('paralax-1')[0];
         var parallax = new Parallax(scene);
 
