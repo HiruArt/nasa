@@ -241,7 +241,7 @@ header {
 }
 
 .register.button-site:before {
-    transform: translate3d(15%, 6em, 0) rotate(0deg);
+    transform: translate(15%, 6em) rotate(0deg);
 }
 
 .inner-block {
@@ -389,6 +389,19 @@ header {
     width: 100%;
     background: url(../img/animate/rocket.svg) center center no-repeat;
     z-index: 1;
+}
+
+.top-rocket:after {
+    content: '';
+    position: absolute;
+    left: 19%;
+    width: 60%;
+    height: 17%;
+    z-index: 0;
+    bottom: 8%;
+    background: rgba(39, 56, 117, 0.34);
+    border-radius: 71%;
+    box-shadow: 8px 19px 45px 37px rgba(39, 56, 117, 0.53);
 }
 
 .active .top-rocket{
@@ -828,11 +841,11 @@ header {
 }
 
 .button-site:after {
-    transform: translate3d(-5%, 6em, 0) rotate(-45deg);
+    transform: translate(-5%, 6em) rotate(-45deg);
 }
 
 .button-site:before {
-    transform: translate3d(5%, 6em, 0) rotate(0deg);
+    transform: translate(5%, 6em) rotate(0deg);
 }
 
 .button-site:hover, .button-site:focus {
@@ -840,7 +853,7 @@ header {
 }
 
 .button-site:hover:before, .button-site:hover:after, .button-site:focus:before, .button-site:focus:after {
-    transform: translate3d(0, -5em, 0) rotate(180deg);
+    transform: translate(0, -5em) rotate(180deg);
     background: #35bffb;
 }
 
@@ -903,7 +916,7 @@ header {
 .video-block .button-site--other{
     padding: 1.63vw 2.4vw;
     left: 8px;
-    top: -2px;
+    top: 3px;
 }
 
 .video-block__top {
@@ -972,7 +985,7 @@ header {
     min-height: 4.4vw;
     color: white;
     font-size: 1.25vw;
-    line-height: 1.667vw;
+    line-height: 1.9vw;
     margin: 1.56vw 0;
     margin-bottom: 1.36vw;
 }
@@ -990,9 +1003,14 @@ header {
     background: url("../img/stilus.png") center center no-repeat;
     background-size: contain;
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 33px;
     min-width: 4.53125vw;
     height: 4.21875vw;
+}
+
+.video-block__item span{
+    position: relative;
+    top: -3px;
 }
 
 
@@ -1003,9 +1021,15 @@ header {
 }
 
 .third-block .inner-block{
-    margin-top: 18px;
+    margin-top: 21px;
     position: relative;
-    left: 12px;
+}
+
+.third-block .title__txt:after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    bottom: -30px;
 }
 
 .third-block:before{
@@ -1015,7 +1039,7 @@ header {
     top: 60px;
     left: -8px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 118px);
     background: url(../img/bg2.png) no-repeat;
     background-size: contain;
     background-position-y: 0;
@@ -1069,8 +1093,8 @@ header {
 }
 
 .third-block .title__caption {
-    /*margin-bottom: 150px;*/
-    /*margin-bottom: 7.8125vw;*/
+    padding-left: 0;
+    padding-top: 2.2vw;
 }
 
 .third-block .button-site{
@@ -1083,7 +1107,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     max-width: 53.85vw;
-    margin-bottom: 3.30625vw;
+    margin-bottom: 3.9vw;
     padding-top: 4.1vw;
 }
 
@@ -1108,15 +1132,57 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 7px;
+    margin-right: 10px;
 }
 
 .about-us__item-img img{
     width: 100%;
+    min-width: 105px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+.about-us__item:nth-child(2) .about-us__item-img{
+    margin-right: 17px;
+}
+.about-us__item:nth-child(2)  img{
+    min-width: 110px;
+    padding-left: 3px;
+    padding-top: 0;
+    position: relative;
+    left: 3px;
+}
+
+.about-us__item:nth-child(3)  img{
+    position: relative;
+    top: 0px;
+    left: 2px;
+    width: 80px;
+    min-width: 81px;
+    padding-top: 8px;
+    padding-left: 2px;
+}
+
+.about-us__item:nth-child(3) .about-us__item-txt{
+    position: relative;
+    top: 4px;
+}
+
+.about-us__item:nth-child(4) .about-us__item-txt{
+    position: relative;
+    min-width: 85%;
+    top: 4px;
+    left: 5px;
+}
+
+.about-us__item:nth-child(4)  img{
+    padding-left: 12px;
+    padding-top: 9px;
 }
 
 .fourth-block {
     position: relative;
+    padding-left: 12px;
 }
 .fourth-block:before {
     content: "";
@@ -1153,6 +1219,10 @@ header {
     min-height: 27.6vw;
 }
 
+.fourth-block .title--other{
+    padding-top: 4.3vw;
+}
+
 .title--other {
     display: flex;
     flex-direction: column;
@@ -1168,13 +1238,33 @@ header {
 .title--other .title__caption {
     color: white;
     text-align: center;
-    margin-bottom: 5.2083vw;
+    margin-bottom: 4.883vw;
 }
 
 .fourth-block .title__caption{
     font-size: 1.5625vw;
     max-width: 100%;
     line-height: 2.34375vw;
+}
+
+
+.fourth-block .title--other .title__txt:after {
+    left: 50%;
+    margin-left: -48px;
+    background: white;
+    bottom: -33px;
+}
+
+.fourth-block .title__txt {
+    font-weight: 900;
+    color: white;
+    position: relative;
+    margin: 0;
+    margin-bottom: 35px;
+}
+
+.fourth-block .button-site--other {
+    left: 2px;
 }
 
 
@@ -1315,6 +1405,8 @@ footer{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 80vw;
+    padding-left: 3px;
 }
 
 .footer__left {
@@ -1362,12 +1454,13 @@ footer{
     flex-direction: column;
     justify-content: flex-end;
     text-align: right;
+    margin-bottom: -9px;
 }
 
 .footer__link a {
     color: #00b2ff;
     font-size: 0.9375vw;
-    line-height: 1.57375vw;
+    line-height: 1.72vw;
 }
 
 .bitkoin{
@@ -1593,6 +1686,10 @@ footer{
     .inner-block {
         height: auto;
     }
+
+    .video-block__item:nth-child(3) {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1130px) {
@@ -1613,6 +1710,10 @@ footer{
         position: absolute;
         top: -24px;
         left: -11px;
+    }
+
+    .third-block:before{
+        height: calc(100% );
     }
 }
 
@@ -1875,7 +1976,7 @@ footer{
 
     .third-block .title__caption{
         max-width: 100%;
-        padding-top: 25px;
+        padding-top: 29px;
         margin-bottom: 45px;
     }
 
@@ -1918,15 +2019,90 @@ footer{
         align-items: center;
     }
 
+    .header__right{
+        right: 1px;
+        letter-spacing: 1px;
+    }
+
     .top-rocket{
         display: block;
+    }
+
+    .top-rocket:after{
+        content: none;
     }
 
     .top-rocket:before {
         background: url(../img/animate/rocket.svg) center center no-repeat;
     }
 
+    .video-block__item {
+        font-size: 14px !important;
+        line-height: 22px !important;
+        align-items: flex-start;
+    }
 
+    .video-block__item:nth-last-child(2) {
+        margin-bottom: 8px;
+    }
+
+    .video-block__item:first-child span{
+        top: 3px;
+    }
+
+    .video-block .button-site--other {
+        padding: 1.63vw 2.4vw;
+        left: 0;
+        top: -1px;
+    }
+
+    .about-us__item:first-child{
+        order: 1;
+    }
+    .about-us__item:nth-child(2){
+        order: 3;
+    }
+    .about-us__item:nth-child(3){
+        order: 2;
+    }
+    .about-us__item:last-child{
+        order: 4;
+    }
+
+    .about-us__item:nth-child(3) img {
+        position: relative;
+        top: 0px;
+        left: -7px;
+        width: 100%;
+        min-width: auto;
+        padding-top: 7px;
+        padding-left: 13px;
+    }
+
+    .about-us__item:nth-child(2) img {
+        min-width: auto;
+        padding-left: 0px;
+        padding-top: 8px;
+        position: relative;
+        left: 1px;
+    }
+
+    .about-us__item:nth-child(2) .about-us__item-img {
+        margin-right: 10px;
+    }
+
+    .about-us__item:nth-child(4) img {
+        padding-left: 2px;
+        padding-top: 7px;
+        min-width: 50px;
+    }
+
+    .about-us__item:nth-child(4) .about-us__item-txt {
+        position: relative;
+        min-width: 85%;
+        top: 2px;
+        left: 0px;
+    }
 
 
     header {
@@ -1937,12 +2113,17 @@ footer{
         width: 100%;
     }
 
+    .header__logo img {
+        width: 123px;
+    }
+
     .register {
         display: none;
     }
 
     .login {
         margin-right: 0;
+        letter-spacing: 2px;
     }
 
     .title__txt {
@@ -1956,7 +2137,7 @@ footer{
 
     .top-block .title .title__txt {
         padding-left: 0;
-        margin-top: 75px;
+        margin-top: 80px;
         width: 100%;
     }
 
@@ -1975,12 +2156,12 @@ footer{
 
     .top-block .title__caption {
         margin-bottom: 55px;
-        margin-top: 20px;
+        margin-top: 22px;
     }
 
     .top-block .button-site{
         left: 0;
-        top: -8px;
+        top: -10px;
     }
 
     .video-block__top{
@@ -2069,6 +2250,7 @@ footer{
     .footer {
         background: unset;
         padding-bottom: 35px;
+        margin-top: 43px;
     }
 
     .top-block {
@@ -2090,17 +2272,17 @@ footer{
     }
 
     .third-block {
-        padding-top: 25px;
+        padding-top: 3px;
     }
 
     .top-rocket {
-        width: 135px;
-        height: 325px;
+        width: 143px;
+        height: 329px;
         transform: rotate(0) translateX(-50%);
         margin-top: 245px;
-        margin-left: 0;
+        margin-left: 3px;
         position: absolute;
-        bottom: -367px;
+        bottom: -368px;
         left: 50%;
         top: auto;
     }
@@ -2113,7 +2295,7 @@ footer{
     }
 
     .video-block {
-        margin-top: 44px;
+        margin-top: 53px;
     }
 
     .video-block__left a {
@@ -2128,6 +2310,10 @@ footer{
         padding-left: 0;
     }
 
+    .second-block .title{
+        padding-left: 0;
+    }
+
     .third-block .inner-block {
         margin-top: 18px;
         position: relative;
@@ -2136,18 +2322,32 @@ footer{
 
     .third-block .title__caption {
         max-width: 100%;
-        padding-top: 25px;
+        padding-top: 29px;
         margin-bottom: 56px;
+    }
+
+    .third-block .title__txt:after {
+        margin-left: -25px;
+        left: 50%;
+        width: 50px;
+        bottom: -33px;
     }
 
     .title .title__txt {
         font-size: 30px !important;
-        line-height: 38px !important;
+        line-height: 36px !important;
     }
 
     .title__caption {
         font-size: 14px !important;
         line-height: 21px !important;
+    }
+
+    .about-us__item-img img {
+        width: 100% ;
+        min-width: auto ;
+        padding-left: initial ;
+        padding-top: initial ;
     }
 
     .button-site--other {
@@ -2166,11 +2366,21 @@ footer{
     }
 
     .fourth-block {
-        padding-top: 156px;
-        padding-bottom: 230px;
+        padding-top: 142px;
+        padding-bottom: 179px;
         background: url(../img/media/480-2.png) top center no-repeat;
         background-size: 100% 739px;
         margin-top: 71px;
+        padding-left: 0px;
+    }
+
+    .fourth-block .title--other .title__txt:after {
+        margin-left: -25px;
+    }
+
+    .fourth-block .title--other .title__caption {
+        margin-top: 21px;
+        margin-bottom: 48px;
     }
 
     .title--other .title__caption {
@@ -2283,8 +2493,8 @@ footer{
     }
 
     .second-block .title--other .title__txt:after {
-        margin-left: -25px;
-        bottom: -24px;
+        margin-left: -24px;
+        bottom: -28px;
     }
 }
 
