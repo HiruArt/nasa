@@ -102,14 +102,15 @@ main{
     background-repeat: round;
 }
 
-.page-wrap:before {
+/*.page-wrap:before {*/
+.b-wave {
     content: "";
     position: absolute;
     top: -10px;
     left: -10px;
     height: 134.01041666666666vw;
     width: 114.58333333333333vw;
-    background: url(../img/bggt1.png) top left no-repeat;
+    background: url(../img/bggt21.png) top left no-repeat;
     background-size: auto 100%;
     z-index: 5;
     /*transition: 0.5s;*/
@@ -432,7 +433,7 @@ header {
     visibility: hidden;
 }
 .active .fire-big {
-    animation: fire-big 4s ease-in-out ;
+    animation: fire-big 4s ease-in-out infinite;
     visibility: visible;
 }
 @keyframes fire-big {
@@ -487,7 +488,7 @@ header {
 }
 
 .active .fire-min {
-    animation: fire-big 3.5s ease-in-out 0.5s;
+    animation: fire-big 3.5s ease-in-out 0.5s infinite;
     visibility: visible;
 }
 
@@ -1705,7 +1706,8 @@ footer{
         left: 0px;
     }
 
-    .page-wrap:before {
+    /*.page-wrap:before {*/
+    .b-wave {
         content: "";
         position: absolute;
         top: -24px;
@@ -1854,7 +1856,8 @@ footer{
         background: transparent;
     }
 
-    .page-wrap:before{
+    /*.page-wrap:before{*/
+    .b-wave{
         background: transparent;
     }
 
@@ -2458,7 +2461,8 @@ footer{
     .third-block .button-site {
         margin-bottom: 21px;
     }
-    .page-wrap:before,
+    /*.page-wrap:before,*/
+    .b-wave,
     .page-wrap:after {
         display: none;
     }
