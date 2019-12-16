@@ -35,6 +35,7 @@ $(document).ready(function () {
     //     this.style.display = 'none';
     // };
 
+
     var ts;
     $(window).on('touchstart', function (e) {
         ts = $(document).scrollTop();
@@ -47,94 +48,176 @@ $(document).ready(function () {
 
         $(window).on('touchmove mousewheel wheel', function (e) {
 
-            if (flagScroll) return;
-
-            let height = this.innerHeight;
             let scroll = this.pageYOffset;
-            let scrollDelta = e.originalEvent.deltaY;
 
             var secondBlock = $('.second-block').offset().top;
 
             var delta = e.originalEvent.deltaY;
 
 
-            if (delta > 0 && animTop == false){
-
-
-                flagScroll = true;
-                animTop = true;
-
-                $('.page-wrap').addClass('top-animate');
-                $('.page-wrap').addClass('active ');
-
-                setTimeout(function () {
-
-                    $('body').addClass('page--scroll');
-                    $('html,body').animate({
-                        scrollTop: $('.second-block').offset().top
-                    }, 900, function () {
-                    });
-                },600);
-
-                setTimeout(function () {
-                    $('.page-wrap').removeClass('active ');
-                }, 1500);
-
-                setTimeout(function () {
-                    $('.page-wrap').removeClass('top-animate');
-                    $('.page-wrap').addClass('top');
-                    flagScroll = false;
-                }, 2000);
-
-                setTimeout(function () {
-                    $('.page-wrap').removeClass('top');
-                }, 2200);
+            console.log(scroll);
+            console.log($(this));
+            // $('.top-rocket').css('transform', 'translate(-'+scroll/2+'%, -'+scroll/4+'%) rotate(-34.5deg)');
 
 
 
-                // }
+            flagScroll = true;
+            animTop = true;
 
-            } else {
-                if(scroll < secondBlock - 100 && flagScroll == false){
-                    console.log(222);
-                    animTop = false;
-                    flagScroll = true;
-                    $('html,body').animate({
-                        scrollTop: 0
-                    }, 900, function () {
-
-                        $('body').removeClass('page--scroll');
-                        $('.page-wrap').addClass('top-show');
-                        $('.page-wrap').removeClass('top');
-                        $('.page-wrap').removeClass('active ');
-                        setTimeout(function () {
-
-
-                        },500);
-                        setTimeout(function () {
-                            $('.page-wrap').removeClass('top-show');
-                            flagScroll = false;
-                        },1000);
-
-                    });
-
-
-                }
-                // if (scroll == 0) {
-                //     flagScroll = true;
-                //     setTimeout(function () {
-                //         flagScroll = false;
-                //     }, 500);
-                //
-                //     $('.full-block').removeClass('hide-top');
-                //     $('header').removeClass('fixed');
-                //     $('body').addClass('page--hidden');
-                // }
-
-            }
+            $('.top-rocket').animate({  textIndent: 0 },{
+                step: function(now, fx) {
+                    $('.top-rocket').css('transform', 'translate(-'+scroll/2+'%, -'+scroll/4+'%) rotate(-34.5deg)');
+                },
+                duration:'slow'
+            }, 'linear');
 
 
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // $(window).on('touchmove mousewheel wheel', function (e) {
+        //
+        //     if (flagScroll) return;
+        //
+        //     let height = this.innerHeight;
+        //     let scroll = this.pageYOffset;
+        //     let scrollDelta = e.originalEvent.deltaY;
+        //
+        //     var secondBlock = $('.second-block').offset().top;
+        //
+        //     var delta = e.originalEvent.deltaY;
+        //     // console.log(height);
+        //     // console.log(scroll);
+        //     // console.log(scrollDelta);
+        //     // console.log(secondBlock);
+        //
+        //
+        //     if (delta > 0 && animTop == false){
+        //
+        //
+        //         flagScroll = true;
+        //         animTop = true;
+        //
+        //         $('.page-wrap').addClass('top-animate');
+        //         $('.page-wrap').addClass('active ');
+        //
+        //         setTimeout(function () {
+        //
+        //             $('body').addClass('page--scroll');
+        //             $('html,body').animate({
+        //                 scrollTop: $('.second-block').offset().top
+        //             }, 900, function () {
+        //             });
+        //         },600);
+        //
+        //         setTimeout(function () {
+        //             $('.page-wrap').removeClass('active ');
+        //         }, 1500);
+        //
+        //         setTimeout(function () {
+        //             $('.page-wrap').removeClass('top-animate');
+        //             $('.page-wrap').addClass('top');
+        //             flagScroll = false;
+        //         }, 2000);
+        //
+        //         setTimeout(function () {
+        //             $('.page-wrap').removeClass('top');
+        //         }, 2200);
+        //
+        //
+        //
+        //         // }
+        //
+        //     } else {
+        //         if(scroll < secondBlock - 100 && flagScroll == false){
+        //             console.log(222);
+        //             animTop = false;
+        //             flagScroll = true;
+        //             $('html,body').animate({
+        //                 scrollTop: 0
+        //             }, 900, function () {
+        //
+        //                 $('body').removeClass('page--scroll');
+        //                 $('.page-wrap').addClass('top-show');
+        //                 $('.page-wrap').removeClass('top');
+        //                 $('.page-wrap').removeClass('active ');
+        //                 setTimeout(function () {
+        //
+        //
+        //                 },500);
+        //                 setTimeout(function () {
+        //                     $('.page-wrap').removeClass('top-show');
+        //                     flagScroll = false;
+        //                 },1000);
+        //
+        //             });
+        //
+        //
+        //         }
+        //         // if (scroll == 0) {
+        //         //     flagScroll = true;
+        //         //     setTimeout(function () {
+        //         //         flagScroll = false;
+        //         //     }, 500);
+        //         //
+        //         //     $('.full-block').removeClass('hide-top');
+        //         //     $('header').removeClass('fixed');
+        //         //     $('body').addClass('page--hidden');
+        //         // }
+        //
+        //     }
+        //
+        //
+        // });
+        //
+        //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         // var blocks = [];
