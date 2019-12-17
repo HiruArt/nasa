@@ -2560,7 +2560,17 @@ footer{
         box-shadow: 0 45px 65px -50px black;
     }
 }
+@media (max-height: 430px) {
+    .waves {
+        top: -25px;
+    }
+}
 
+@media (max-height: 430px) {
+    .waves {
+        top: 0;
+    }
+}
 
 @media (max-width: 440px){
     .second-block {
