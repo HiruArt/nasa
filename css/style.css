@@ -83,7 +83,7 @@ main{
 }
 
 .page-wrap {
-    background-color: #35448c;
+    /*background-color: #35448c;*/
     position: relative;
     overflow: hidden;
 }
@@ -95,7 +95,7 @@ main{
     left: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/bbg-3.png) top left no-repeat;
+    background: url(../img/bbg-3.jpg) top left no-repeat;
     background-size: 100%;
     z-index: 1;
 
@@ -110,7 +110,7 @@ main{
     left: -10px;
     height: 134.01041666666666vw;
     width: 114.58333333333333vw;
-    background: url(../img/bggt21.png) top left no-repeat;
+    background: url(../img/bggt21.webp) top left no-repeat;
     background-size: auto 100%;
     z-index: 5;
     /*transition: 0.5s;*/
