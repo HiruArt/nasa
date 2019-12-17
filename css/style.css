@@ -1136,7 +1136,7 @@ header {
     margin-right: 10px;
 }
 
-.about-us__item-img svg{
+.about-us__item-img img{
     width: 100%;
     min-width: 105px;
     padding-left: 5px;
@@ -2527,8 +2527,19 @@ footer{
         background-size: 100% 739px;
     }
 }
+@media (max-width: 365px){
+    .second-block {
+        background: url(../img/media/360-1.png) top center no-repeat;
+        background-size: 100% 1178px;
+    }
 
-@media (max-width: 360px){
+    .fourth-block {
+        background: url(../img/media/360-2.png) top center no-repeat;
+        background-size: 100% 739px;
+    }
+}
+
+@media (max-width: 340px){
     .second-block {
         background: url(../img/mob-t-bg-2.png) top center no-repeat;
         background-size: 100% 1178px;
