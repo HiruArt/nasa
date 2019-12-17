@@ -930,7 +930,18 @@ header {
 .video-block__left {
     width: 100%;
     max-width: 36.458vw;
+    position: relative;
 }
+/*.video-block__left:before {*/
+    /*content: "";*/
+    /*position: absolute;*/
+    /*top: 10%;*/
+    /*left: 10%;*/
+    /*transition: 0.5s;*/
+    /*width: 80%;*/
+    /*height: 87%;*/
+    /*box-shadow: 0 0 2.604166666666667vw 0.5208333333333333vw black;*/
+/*}*/
 
 .video-block__left a {
     display: flex;
@@ -939,6 +950,7 @@ header {
     position: relative;
     overflow: hidden;
     max-height: 21.254166vw;
+    box-shadow: 0 2.604166666666667vw 2.864583333333333vw -1.8229166666666667vw black;
 }
 
 .video-block__left a:after {
@@ -960,6 +972,8 @@ header {
 
 .video-block__left a img {
     transition: 0.5s;
+    width: 100%;
+    margin-top: 3.0729166666666665vw;
 }
 
 .video-block__left a:hover img {
@@ -1666,6 +1680,14 @@ footer{
     .about-us__list{
         padding-top: 2.64vw;
     }
+    .about-us__item-img img,
+    .about-us__item:nth-child(2) img {
+        min-width: 80px;
+    }
+    .about-us__item:nth-child(3) img {
+        min-width: 50px;
+        width: auto;
+    }
 }
 
 @media (max-width: 1380px) {
@@ -1674,6 +1696,25 @@ footer{
     }
     .waves-3 {
         transform: rotate(2deg) translate(-4px, -30px);
+    }
+}
+
+
+@media (max-width: 1370px) and (min-height: 1000px ) {
+    .inner-block {
+        height: 55vh;
+    }
+    .footer {
+        padding-top: 0;
+    }
+    .waves {
+        top: -215px;
+    }
+}
+
+@media (max-width: 1130px) and (min-height: 1000px ) {
+    .waves {
+        top: 58px;
     }
 }
 
@@ -1820,7 +1861,13 @@ footer{
         top: 0px;
         left: 0px;
     }
-
+    .about-us__item-img img,
+    .about-us__item:nth-child(2) img {
+        min-width: 65px;
+    }
+    .about-us__item:nth-child(3) img {
+        min-width: 40px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2001,8 +2048,17 @@ footer{
         top: -55%;
         left: -30%;
     }
+    .video-block__left a {
+        box-shadow: 0 50px 50px -50px black;
+    }
+
 }
 
+@media (max-width: 768px) {
+    .paralax {
+        display: none;
+    }
+}
 
 @media (max-width: 560px) {
     .waves-3 {
@@ -2499,6 +2555,9 @@ footer{
     .second-block .title--other .title__txt:after {
         margin-left: -24px;
         bottom: -28px;
+    }
+    .video-block__left a {
+        box-shadow: 0 45px 65px -50px black;
     }
 }
 
