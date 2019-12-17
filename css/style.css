@@ -1547,6 +1547,18 @@ footer{
     margin-left: 41.666666666666664vw;
     transform: rotate(35deg);
 }
+.planet-2:after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 37%;
+    height: 37%;
+    position: absolute;
+    z-index: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0.46875vw 0.46875vw 0.9895833333333333vw -0.3125vw rgb(47, 57, 88);
+}
 
 .planet-3{
 
@@ -2619,6 +2631,9 @@ footer{
     }
 }
 
+.dbi {
+    display: block !important;
+}
 
 
 /*@media (max-width: 340px){*/
