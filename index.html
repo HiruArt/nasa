@@ -128,7 +128,9 @@
                         <div class="video-block__top">
                             <div class="video-block__left" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1500">
                                 <a data-fancybox data-type="iframe" data-src="https://www.youtube.com/embed/2E7l9rZ0cQY" href="javascript:;">
-                                    <img src="./img/video-img.jpg" alt="img">
+                                    <img class="b-lazy"
+                                         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                         data-src="./img/video-img.jpg" alt="img">
                                 </a>
                             </div>
 
@@ -184,6 +186,7 @@
             </div>
 
             <div class="third-block" >
+                <div class="third-block-bg b-lazy" data-src="img/bg2.png"></div>
                 <div class="inner-block container scroll-block" data-id="third-block">
                     <div class="title">
                         <h1 class="title__txt" >
@@ -243,7 +246,7 @@
                     </a>
 
 
-                    <div class="big-phone">
+                    <div class="big-phone b-lazy" data-src="img/FX2.png">
 
                     </div>
                 </div>
@@ -316,7 +319,7 @@
         </div>
     </main>
     <footer>
-        <div class="footer scroll-block" data-id="footer">
+        <div class="footer scroll-block b-lazy" data-id="footer" data-src="img/fbg.png">
             <div class="container footer__inner">
                 <div class="footer__left">
                     <div class="footer__social">
@@ -385,6 +388,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/rellax.min.js"></script>
+    <script src="js/blazy.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>

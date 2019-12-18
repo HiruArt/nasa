@@ -49,8 +49,8 @@ $(document).ready(function () {
             }
 
             $('.top-rocket').css('transform', 'translate(-'+scroll/15.5+'%, -'+scroll/25+'%) rotate(-34.5deg)');
-            $('.waves-2').css('transform', 'translate(-'+scroll/110+'%, -'+scroll/100+'%)');
-            $('.waves-3').css('transform', 'translate(-'+scroll/120+'%, -'+scroll/120+'%)');
+            $('.waves-2').css('transform', 'translate(-'+scroll/70+'%, -'+scroll/60+'%)');
+            $('.waves-3').css('transform', 'translate(-'+scroll/60+'%, -'+scroll/90+'%) rotate(7deg)');
 
 
             if(scroll < 850){
@@ -108,6 +108,7 @@ $(document).ready(function () {
         }
     }
 
+    var bLazy = new Blazy();
 
 });
 
