@@ -117,6 +117,15 @@ main{
     /*transition: 0;*/
 }
 
+.b-wave svg{
+    position: relative;
+    left: -20px;
+    top: -70px;
+    width: 114.58333333333333vw;
+    height: 151.010417vw;
+}
+
+
 .page-wrap.top-animate:before{
     animation: opacity 3.3s;
     animation-fill-mode: forwards;

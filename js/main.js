@@ -38,7 +38,7 @@ $(document).ready(function () {
         flagScroll = false;
 
 
-        var nScroll = 10;
+        var nScroll = 6;
         $(window).scroll(function () {
             let scroll = $(this).scrollTop();
 
@@ -48,18 +48,19 @@ $(document).ready(function () {
                 $('.top-rocket').removeClass('active');
             }
 
-            $('.top-rocket').css('transform', 'translate(-'+scroll/8.5+'%, -'+scroll/12+'%) rotate(-34.5deg)');
-            $('.waves-2').css('transform', 'translate(-'+scroll/60+'%, -'+scroll/70+'%)');
-            $('.waves-3').css('transform', 'translate(-'+scroll/80+'%, -'+scroll/60+'%)');
+            $('.top-rocket').css('transform', 'translate(-'+scroll/15.5+'%, -'+scroll/25+'%) rotate(-34.5deg)');
+            $('.waves-2').css('transform', 'translate(-'+scroll/110+'%, -'+scroll/100+'%)');
+            $('.waves-3').css('transform', 'translate(-'+scroll/120+'%, -'+scroll/120+'%)');
 
 
             if(scroll < 850){
-                $('.b-wave').css('transform', 'translate(-'+scroll/90+'%, -'+scroll/70+'%)');
+                $('.b-wave').css('transform', 'translate(-'+scroll/150+'%, -'+scroll/100+'%)');
                 $('.b-wave').css('opacity', 1);
             } else {
-                nScroll == 0 ? scroll/30 : nScroll;
+                nScroll == 0 ? scroll/120 : nScroll;
                 $('.b-wave').css('transform', 'translate(-'+nScroll+'%, -'+scroll/70+'%)');
                 $('.b-wave').css('opacity', 2.3 - (scroll*3) / 2500);
+                $('.waves').css('opacity', 1.5 - (scroll*3) / 2500);
             }
 
 
