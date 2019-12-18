@@ -60,7 +60,7 @@ $(document).ready(function () {
                 nScroll == 0 ? scroll/120 : nScroll;
                 $('.b-wave').css('transform', 'translate(-'+nScroll+'%, -'+scroll/70+'%)');
                 $('.b-wave').css('opacity', 2.3 - (scroll*3) / 2500);
-                $('.waves').css('opacity', 1.5 - (scroll*3) / 2500);
+                $('.waves').css('opacity', 1.8 - (scroll*3) / 2500);
             }
 
 

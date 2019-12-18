@@ -3,7 +3,7 @@
 <svg version="1.1" id="OBJECTS" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 182 433.3" style="enable-background:new 0 0 182 433.3;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#XMLID_2_);}
+	.st00{fill:url(#XMLID_2_);}
 	.st1{fill:#F3F5FF;}
 	.st2{fill:url(#XMLID_3_);}
 	.st3{fill:url(#XMLID_4_);}
@@ -49,7 +49,7 @@
 				<stop  offset="0.7816" style="stop-color:#2E3A74"/>
 				<stop  offset="1" style="stop-color:#2B366D"/>
 			</linearGradient>
-			<path id="XMLID_140_" class="st0" d="M42.7,165.1L43.5,384l-30.3,0.1l-0.8-218.9c-0.1-15.7,2.3-31.4,6.9-46.4l3.9-12.6
+			<path id="XMLID_140_" class="st00" d="M42.7,165.1L43.5,384l-30.3,0.1l-0.8-218.9c-0.1-15.7,2.3-31.4,6.9-46.4l3.9-12.6
 				c0.1-0.3,0.2-0.6,0.4-0.9c1.8-3.2,6.8-2.9,8,0.9l4,12.6C40.2,133.8,42.6,149.4,42.7,165.1z"/>
 			<path id="XMLID_138_" class="st1" d="M35.1,165.2l0.8,218.9l-22.7,0.1l-0.8-218.9c-0.1-15.7,2.3-31.4,6.9-46.4l3.9-12.6
 				c0.1-0.3,0.2-0.6,0.4-0.9c0.2,0.3,0.3,0.6,0.4,0.9l4,12.6C32.7,133.8,35.1,149.4,35.1,165.2z"/>
