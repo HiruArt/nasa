@@ -108,8 +108,10 @@ $(document).ready(function () {
         }
     }
 
+    $(window).resize(function() {
+        var bLazy = new Blazy();
+    });
     var bLazy = new Blazy();
-
 });
 
 
