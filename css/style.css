@@ -110,7 +110,7 @@ main{
     left: -10px;
     height: 134.01041666666666vw;
     width: 114.58333333333333vw;
-    background: url(../img/bggt21.webp) top left no-repeat;
+    /*background: url(../img/bggt21.webp) top left no-repeat;*/
     background-size: auto 100%;
     z-index: 5;
     /*transition: 0.5s;*/
